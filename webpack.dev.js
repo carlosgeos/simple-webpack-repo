@@ -22,7 +22,6 @@ const path = require('path');
  *
  */
 
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -47,21 +46,6 @@ module.exports = {
 
         test: /\.js$/
       },
-      {
-        test: /\.(scss|css)$/,
-
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'sass-loader'
-          }
-        ]
-      }
     ]
   },
 
